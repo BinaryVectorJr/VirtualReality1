@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Image))]
-public class GazeableButton : GazeableObject
+public class GazeableButton : GazeableObject    //Means make Gazeable button a child of Gaeable Object i.e. it inherits all methods of parent
 {
 
     protected VRCanvas parentPanel;

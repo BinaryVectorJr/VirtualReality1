@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ModeButton : GazeableButton
 {
-    [SerializeField]
+    [SerializeField]    //Acccording to this option, it makes the private variables appear in the editor. kinda like UProperty
     private InputMode Mode;
 
     public override void OnPress(RaycastHit HitInfo)
