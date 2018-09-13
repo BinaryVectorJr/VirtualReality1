@@ -15,5 +15,14 @@ public class FloorGazeable : GazeableObject
 
             Player.instance.transform.position = DestLoc;
         }
+        else if (Player.instance.ActiveMode == InputMode.FURNITURE)
+        {
+            //Create the furniture
+            GameObject PlacedFurniture = GameObject.Instantiate(Player.instance.ActiveFurniturePrefab) as GameObject;
+            //GameOnjcet.Instantiate returns just an object, however we can write "as GameObject" to specify to the function that once executed, "save" it as of the type GameObject
+
+            //Place the furniture on the floor wherever the raycast hits the collider of the floor
+            PlacedFurniture.transform.position = HitInfo.point;
+        }
     }
 }

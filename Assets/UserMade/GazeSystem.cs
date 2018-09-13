@@ -39,6 +39,7 @@ public class GazeSystem : MonoBehaviour {
         if (Physics.Raycast(RaycastRay, out HitInfo))
         {
             //Get gameobject from hitinfo - this is why colliders are required to have a functioning raycast system
+            //HitInfo as an out parameter basically sends out (like an output) information about where it hits the collider, to whatever other thing needs it as an input
             GameObject HitObject = HitInfo.collider.gameObject;
 
             //Get the GazeableObject component from the object hit

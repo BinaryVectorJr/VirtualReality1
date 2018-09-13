@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GazeableObject : MonoBehaviour
 {
+    public bool IsTranformable = false;
+
     public virtual void OnGazeEnter(RaycastHit HitInfo)
     {
         Debug.Log("Gaze entered on " + gameObject.name);
@@ -27,6 +29,10 @@ public class GazeableObject : MonoBehaviour
     public virtual void OnHold(RaycastHit HitInfo)
     {
         Debug.Log("Button held!");
+        if (IsTranformable)
+        {
+            GazeTransform(HitInfo);
+        }
     }
 
     public virtual void OnRelease(RaycastHit HitInfo)
@@ -34,4 +40,36 @@ public class GazeableObject : MonoBehaviour
         Debug.Log("Button released!");
     }
 
+    public virtual void GazeTransform(RaycastHit HitInfo)
+    {
+        switch (Player.instance.ActiveMode)
+        {
+            case InputMode.TRANSLATE:
+                GazeTranslate(HitInfo);
+                break;
+
+            case InputMode.ROTATE:
+                GazeRotate(HitInfo);
+                break;
+
+            case InputMode.SCALE:
+                GazeScale(HitInfo);
+                break;
+        }
+    }
+
+    public virtual void GazeTranslate(RaycastHit HitInfo)
+    {
+
+    }
+
+    public virtual void GazeRotate(RaycastHit HitInfo)
+    {
+
+    }
+
+    public virtual void GazeScale(RaycastHit HitInfo)
+    {
+
+    }
 }

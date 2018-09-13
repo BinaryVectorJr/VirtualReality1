@@ -6,12 +6,18 @@ public enum InputMode
 {
     NONE,
     TELEPORT,
-    WALK
+    WALK,
+    FURNITURE,
+    TRANSLATE,
+    ROTATE,
+    SCALE
 }
 
 public class Player : MonoBehaviour {
 
     public static Player instance;  //creates a player instance that can be called anywhere in the program
+
+    public Object ActiveFurniturePrefab;
 
     public InputMode ActiveMode = InputMode.NONE;
 
