@@ -6,6 +6,9 @@ public class GazeableObject : MonoBehaviour
 {
     public bool IsTranformable = false;
 
+    private int ObjectLayer;
+    private const int IGNORE_RAYCAST_LAYER = 2;
+
     public virtual void OnGazeEnter(RaycastHit HitInfo)
     {
         Debug.Log("Gaze entered on " + gameObject.name);
@@ -24,6 +27,13 @@ public class GazeableObject : MonoBehaviour
     public virtual void OnPress(RaycastHit HitInfo)
     {
         Debug.Log("Button pressed!");
+
+        if (IsTranformable)
+        {
+            ObjectLayer = gameObject.layer;
+
+            gameObject.layer = IGNORE_RAYCAST_LAYER;
+        }
     }
 
     public virtual void OnHold(RaycastHit HitInfo)
@@ -38,6 +48,12 @@ public class GazeableObject : MonoBehaviour
     public virtual void OnRelease(RaycastHit HitInfo)
     {
         Debug.Log("Button released!");
+
+        if (IsTranformable)
+        {
+            gameObject.layer = ObjectLayer;
+        }
+
     }
 
     public virtual void GazeTransform(RaycastHit HitInfo)
@@ -60,7 +76,15 @@ public class GazeableObject : MonoBehaviour
 
     public virtual void GazeTranslate(RaycastHit HitInfo)
     {
-
+        //Move the object to some other position on the floor
+        if (HitInfo.collider != null && HitInfo.collider.GetComponent<FloorGazeable>())
+        {
+            transform.position = HitInfo.point;
+        }
+        else
+        {
+            Debug.LogError("Cannot move!");
+        }
     }
 
     public virtual void GazeRotate(RaycastHit HitInfo)

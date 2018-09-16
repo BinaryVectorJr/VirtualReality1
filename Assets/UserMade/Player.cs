@@ -7,6 +7,7 @@ public enum InputMode
     NONE,
     TELEPORT,
     WALK,
+    FLOAT,
     FURNITURE,
     TRANSLATE,
     ROTATE,
@@ -63,6 +64,18 @@ public class Player : MonoBehaviour {
             if (//NewPos.y > rightWall.transform.position.y && NewPos.y < leftWall.transform.position.y &&
                 NewPos.y < ceiling.transform.position.y && NewPos.y > floor.transform.position.y)
                 //NewPos.z > backWall.transform.position.z && NewPos.z < forwardWall.transform.position.z)
+            {
+                transform.position = NewPos;    //need to sort the confinement using colliders
+            }
+        }
+        else if (ActiveMode == InputMode.FLOAT)
+        {
+            Vector3 forward = Camera.main.transform.forward;
+            Vector3 NewPos = transform.position + forward * Time.deltaTime * (Speed/5);
+
+            if (//NewPos.y > rightWall.transform.position.y && NewPos.y < leftWall.transform.position.y &&
+                NewPos.y < ceiling.transform.position.y && NewPos.y > floor.transform.position.y)
+            //NewPos.z > backWall.transform.position.z && NewPos.z < forwardWall.transform.position.z)
             {
                 transform.position = NewPos;    //need to sort the confinement using colliders
             }

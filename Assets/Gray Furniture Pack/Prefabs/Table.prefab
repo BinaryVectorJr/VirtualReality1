@@ -10,12 +10,14 @@ GameObject:
   - component: {fileID: 449564}
   - component: {fileID: 3350110}
   - component: {fileID: 2338432}
+  - component: {fileID: 114391530229396116}
+  - component: {fileID: 65280705528713782}
   m_Layer: 0
   m_Name: Table
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &449564
 Transform:
@@ -23,9 +25,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164614}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: -0.99998146, z: -0, w: -0.0060941293}
+  m_LocalPosition: {x: 0.47898304, y: -0.0037622452, z: -6.543176}
+  m_LocalScale: {x: 0.70257115, y: 1, z: 0.9999561}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -82,3 +84,27 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 164614}
   m_IsPrefabParent: 1
+--- !u!65 &65280705528713782
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164614}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.939115, y: 0.7377414, z: 0.8726062}
+  m_Center: {x: 0.0000027121548, y: 0.36884734, z: -0.038510893}
+--- !u!114 &114391530229396116
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 164614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ffbc352519af84bbb7f885e39596fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsTranformable: 1

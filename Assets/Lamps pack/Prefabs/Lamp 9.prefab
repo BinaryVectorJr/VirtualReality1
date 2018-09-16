@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 458456}
+  - component: {fileID: 114182682892715972}
   m_Layer: 0
   m_Name: Lamp 9
   m_TagString: Untagged
@@ -26,7 +27,6 @@ GameObject:
   - component: {fileID: 3318194}
   - component: {fileID: 2301166}
   - component: {fileID: 65872863315673842}
-  - component: {fileID: 114652821344315068}
   m_Layer: 0
   m_Name: Lamp_9
   m_TagString: Untagged
@@ -69,8 +69,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104356}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.996, y: 1.396, z: -2.529}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 24.385, y: 4.152, z: 54.492}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 489622}
@@ -142,9 +142,9 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.81
-  m_Range: 0.94
-  m_SpotAngle: 125.2
+  m_Intensity: 3
+  m_Range: 0.95
+  m_SpotAngle: 125
   m_CookieSize: 10
   m_Shadows:
     m_Type: 0
@@ -191,14 +191,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3234, y: 0.5237, z: 0.31849998}
   m_Center: {x: 0, y: 0.26185, z: -0.0049499944}
---- !u!114 &114652821344315068
+--- !u!114 &114182682892715972
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 179086}
+  m_GameObject: {fileID: 104356}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 40ffbc352519af84bbb7f885e39596fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  IsTranformable: 1
