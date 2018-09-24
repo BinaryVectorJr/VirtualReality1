@@ -19,6 +19,7 @@ public class VRCanvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        LookAtPlayer();
     }
 
     public void SetActiveButton(GazeableButton activeButton)
@@ -44,4 +45,14 @@ public class VRCanvas : MonoBehaviour
         }
     }
 
+    void LookAtPlayer()
+    {
+        Vector3 playerPos = Player.instance.transform.position;
+        Vector3 vecToPlayer = playerPos - transform.position;   //origin = Canvas, end point = player
+
+        Vector3 lookAtPos = transform.position - vecToPlayer;
+
+        transform.LookAt(lookAtPos);    //LookAt is a function that makes the forward vector of an object point to a certain point
+
+    }
 }

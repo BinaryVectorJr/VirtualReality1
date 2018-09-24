@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2383884}
   - component: {fileID: 114382711826899336}
   - component: {fileID: 65357789993317528}
+  - component: {fileID: 114687050383419910}
   m_Layer: 0
   m_Name: Cheir
   m_TagString: Untagged
@@ -25,9 +26,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 153758}
-  m_LocalRotation: {x: -0, y: -0.0060941293, z: -0, w: 0.99998146}
-  m_LocalPosition: {x: 0.4611693, y: -0.003758669, z: -7.1705303}
-  m_LocalScale: {x: 0.7025711, y: 1, z: 0.99995595}
+  m_LocalRotation: {x: 0, y: -0.99998146, z: -0, w: -0.0060941293}
+  m_LocalPosition: {x: 12.080051, y: -3.609973, z: 52.8432}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -108,3 +109,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsTranformable: 1
+--- !u!114 &114687050383419910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []

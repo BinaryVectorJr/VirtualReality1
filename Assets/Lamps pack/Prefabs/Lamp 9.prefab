@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 3318194}
   - component: {fileID: 2301166}
   - component: {fileID: 65872863315673842}
+  - component: {fileID: 114089153786211816}
   m_Layer: 0
   m_Name: Lamp_9
   m_TagString: Untagged
@@ -70,7 +71,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104356}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.385, y: 4.152, z: 54.492}
+  m_LocalPosition: {x: 7.1160793, y: 0.54578567, z: -4.485}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 489622}
@@ -161,7 +162,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 2
+  m_Lightmapping: 4
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1.11
   m_ColorTemperature: 6570
@@ -191,6 +192,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3234, y: 0.5237, z: 0.31849998}
   m_Center: {x: 0, y: 0.26185, z: -0.0049499944}
+--- !u!114 &114089153786211816
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 179086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114182682892715972
 MonoBehaviour:
   m_ObjectHideFlags: 1

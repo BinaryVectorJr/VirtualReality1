@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2313894}
   - component: {fileID: 65415022980940780}
   - component: {fileID: 114226910047782968}
+  - component: {fileID: 114339151239416838}
   m_Layer: 0
   m_Name: Armchair
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132866}
   m_LocalRotation: {x: -0, y: -0.434907, z: -0, w: 0.90047544}
-  m_LocalPosition: {x: 1.151, y: -0.0037846565, z: -2.35}
+  m_LocalPosition: {x: 12.780592, y: -3.609999, z: 56.412827}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -108,3 +109,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsTranformable: 1
+--- !u!114 &114339151239416838
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132866}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []

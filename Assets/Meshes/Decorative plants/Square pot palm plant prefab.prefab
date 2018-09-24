@@ -10,6 +10,7 @@ GameObject:
   - component: {fileID: 400000}
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
+  - component: {fileID: 114045271422588820}
   m_Layer: 0
   m_Name: Palm
   m_TagString: Untagged
@@ -88,8 +89,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: -0.99998146, z: -0, w: -0.0060941293}
-  m_LocalPosition: {x: 1.5704024, y: -0.0037856102, z: -8.412807}
-  m_LocalScale: {x: 0.07025721, y: 0.1, z: 0.09999567}
+  m_LocalPosition: {x: 13.279, y: -3.61, z: 54.56}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
   - {fileID: 400000}
   - {fileID: 400004}
@@ -271,6 +272,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 100002}
   m_IsPrefabParent: 1
+--- !u!114 &114045271422588820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fbf3575480402db40813e763382412fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: 0
+  eraseRenderer: 0
+  originalLayer: 0
+  originalMaterials: []
 --- !u!114 &114890606398165380
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -14,9 +14,21 @@ public class GazeableObject : MonoBehaviour
 
     private Vector3 InitialObjectScale;
 
+    public void Start()
+    {
+        GetComponentInChildren<cakeslice.Outline>().enabled = false;    //For the outlining when looked at part
+    }
+
     public virtual void OnGazeEnter(RaycastHit HitInfo)
     {
         Debug.Log("Gaze entered on " + gameObject.name);
+
+        //If this object is furniture and the player is in a transformation mode, enable outline.
+        if (IsTranformable && (Player.instance.ActiveMode == InputMode.TRANSLATE || Player.instance.ActiveMode == InputMode.ROTATE || Player.instance.ActiveMode == InputMode.SCALE))
+        {
+            GetComponentInChildren<cakeslice.Outline>().enabled = true;
+        }
+
     }
 
     public virtual void OnGazeHold(RaycastHit HitInfo)
@@ -27,6 +39,12 @@ public class GazeableObject : MonoBehaviour
     public virtual void OnGazeLeave() //No more key information to pass so no hit info needed
     {
         Debug.Log("Gaze left from " + gameObject.name);
+
+        //To disable outline once the player stops looking at it.
+        if (IsTranformable)
+        {
+            GetComponentInChildren<cakeslice.Outline>().enabled = false;
+        }
     }
 
     public virtual void OnPress(RaycastHit HitInfo)

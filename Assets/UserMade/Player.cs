@@ -11,7 +11,8 @@ public enum InputMode
     FURNITURE,
     TRANSLATE,
     ROTATE,
-    SCALE
+    SCALE,
+    DRAG
 }
 
 public class Player : MonoBehaviour {
