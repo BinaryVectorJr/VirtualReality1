@@ -1,6 +1,6 @@
 # VirtualReality1
 
-* Contains many of the assets and code used to build my first VR based application, as a part of UCSanDiegoX's "Creating Virtual Reality Applications". *
+*Contains many of the assets and code used to build my first VR based application, as a part of UCSanDiegoX's "Creating Virtual Reality Applications".*
 
 
 - Assets folder contains all assets used in the project
